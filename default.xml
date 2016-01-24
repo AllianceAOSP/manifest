@@ -5,7 +5,9 @@
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
   <remote name="base"
-           fetch="https://github.com/BaseROM/" /> 
+           fetch="https://github.com/BaseROM/" />
+  <remote name="pure"
+           fetch="https://github.com/PureNexusProject/" />
   <default revision="refs/tags/android-6.0.1_r10"
            remote="aosp"
            sync-c="true"
@@ -18,6 +20,14 @@
   </project>
   <project path="manifest" name="manifest" remote="base" revision="mm" />
   <project path="vendor/nexus" name="android_vendor_nexus" remote="base" revision="mm" />
+
+  <!-- Proprietary Vendors -->
+  <project path="vendor/asus" name="proprietary_vendor_asus" remote="pure" revision="mm" />
+  <project path="vendor/google" name="proprietary_vendor_google" remote="pure" revision="mm" />
+  <project path="vendor/htc" name="proprietary_vendor_htc" remote="pure" revision="mm" />
+  <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="pure" revision="mm" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure" revision="mm" />
+  <project path="vendor/moto" name="proprietary_vendor_moto" remote="pure" revision="mm" />
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
