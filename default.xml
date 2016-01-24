@@ -17,6 +17,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="manifest" name="manifest" remote="base" revision="mm" />
+  <project path="vendor/nexus" name="android_vendor_nexus" remote="base" revision="mm" />
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
