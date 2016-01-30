@@ -22,7 +22,8 @@
   <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="base" revision="mm" />
   <project path="vendor/nexus" name="android_vendor_nexus" remote="base" revision="mm" />
   <project path="device/huawei/angler" name="android_device_huawei_angler" groups="device,angler,broadcom_pdk" remote="base" revision="mm" />
-  <project path="external/busybox" name="android_external_busybox" remote="pure" revision="mm" />
+  <project path="external/busybox" name="android_external_busybox" remote="base" revision="mm" />
+  <project path="external/sepolicy" name="android_external_sepolicy" groups="pdk" remote="base" revision="mm" />
 
   <!-- Proprietary Vendors -->
   <project path="vendor/asus" name="proprietary_vendor_asus" remote="pure" revision="mm" />
