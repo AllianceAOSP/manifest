@@ -8,7 +8,7 @@
            fetch="https://github.com/BaseROM/" />
   <remote name="pure"
            fetch="https://github.com/PureNexusProject/" />
-  <default revision="refs/tags/android-6.0.1_r10"
+  <default revision="refs/tags/android-6.0.1_r13"
            remote="aosp"
            sync-c="true"
            sync-f="true"
