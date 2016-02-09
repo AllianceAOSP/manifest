@@ -6,13 +6,15 @@
            review="android-review.googlesource.com" />
   <remote  name="alliance"
            fetch="https://github.com/AllianceAOSP/" />
+  <remote  name="ac"
+  		   fetch="https://bitbucket.org/allianceaosp/" />
   <default revision="refs/tags/android-6.0.1_r13"
            remote="aosp"
            sync-c="true"
            sync-f="true"
            sync-j="4" />
 
-  <!-- Alliance Repo's -->
+  <!-- Alliance Repos -->
   <project path="build" name="android_build" groups="pdk" remote="alliance" revision="mm" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -32,6 +34,11 @@
 
   <!-- Kernel Source -->
   <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="mm" />
+
+  <!-- Alliance Control -->
+  <!-- NOTICE: Alliance Control will remain closed-source and proprietary until further notice. -->
+  <!-- 		   This is not open for discussion. Thank you. -->
+  <project path="packages/apps/AllianceControlAOSP" name="alliance-control-aosp-inline" remote="ac" revision="mm" />
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
