@@ -4,36 +4,34 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
-  <remote name="base"
-           fetch="https://github.com/BaseROM/" />
-  <remote name="pure"
-           fetch="https://github.com/PureNexusProject/" />
+  <remote  name="alliance"
+           fetch="https://github.com/AllianceAOSP/" />
   <default revision="refs/tags/android-6.0.1_r13"
            remote="aosp"
            sync-c="true"
            sync-f="true"
            sync-j="4" />
 
-  <!-- BaseRom Repo's -->
-  <project path="build" name="android_build" groups="pdk" remote="base" revision="mm" >
+  <!-- Alliance Repo's -->
+  <project path="build" name="android_build" groups="pdk" remote="alliance" revision="mm" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="manifest" name="manifest" remote="base" revision="mm" />
-  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="base" revision="mm" />
-  <project path="vendor/nexus" name="android_vendor_nexus" remote="base" revision="mm" />
-  <project path="device/huawei/angler" name="android_device_huawei_angler" groups="device,angler,broadcom_pdk" remote="base" revision="mm" />
-  <project path="external/busybox" name="android_external_busybox" remote="base" revision="mm" />
-  <project path="external/sepolicy" name="android_external_sepolicy" groups="pdk" remote="base" revision="mm" />
+  <project path="manifest" name="manifest" remote="alliance" revision="mm" />
+  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="alliance" revision="mm" />
+  <project path="vendor/nexus" name="android_vendor_nexus" remote="alliance" revision="mm" />
+  <project path="device/huawei/angler" name="android_device_huawei_angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="mm" />
+  <project path="external/busybox" name="android_external_busybox" remote="alliance" revision="mm" />
+  <project path="external/sepolicy" name="android_external_sepolicy" groups="pdk" remote="alliance" revision="mm" />
 
   <!-- Proprietary Vendors -->
-  <project path="vendor/asus" name="proprietary_vendor_asus" remote="pure" revision="mm" />
-  <project path="vendor/htc" name="proprietary_vendor_htc" remote="pure" revision="mm" />
-  <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="pure" revision="mm" />
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure" revision="mm" />
-  <project path="vendor/moto" name="proprietary_vendor_moto" remote="pure" revision="mm" />
+  <project path="vendor/asus" name="proprietary_vendor_asus" remote="alliance" revision="mm" />
+  <project path="vendor/htc" name="proprietary_vendor_htc" remote="alliance" revision="mm" />
+  <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="alliance" revision="mm" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="alliance" revision="mm" />
+  <project path="vendor/moto" name="proprietary_vendor_moto" remote="alliance" revision="mm" />
 
   <!-- Kernel Source -->
-  <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="base" revision="mm" />
+  <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="mm" />
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
