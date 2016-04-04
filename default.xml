@@ -54,6 +54,9 @@
   <!-- platform tools -->
   <project path="tools/base" name="android_tools_base" groups="tools" remote="alliance" revision="mm" />
 
+  <!-- platform library -->
+  <project path="vendor/alliancesdk" name="android_vendor_alliancesdk" remote="alliance" revision="mm" />
+
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
