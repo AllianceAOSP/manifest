@@ -7,8 +7,8 @@
   <remote  name="alliance"
            fetch="https://github.com/AllianceAOSP/" />
   <remote  name="ac"
-  		   fetch="https://bitbucket.org/allianceaosp/" />
-  <default revision="refs/tags/android-6.0.1_r13"
+           fetch="https://bitbucket.org/allianceaosp/" />
+  <default revision="refs/tags/android-6.0.1_r45"
            remote="aosp"
            sync-c="true"
            sync-f="true"
@@ -39,20 +39,14 @@
   <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="alliance" revision="mm" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="alliance" revision="mm" />
 
+  <!-- Kernel Source -->
+  <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="mm" />
   <!-- Proprietary Vendors -->
   <project path="vendor/asus" name="proprietary_vendor_asus" remote="alliance" revision="mm" />
   <project path="vendor/htc" name="proprietary_vendor_htc" remote="alliance" revision="mm" />
   <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="alliance" revision="mm" />
   <project path="vendor/lge" name="proprietary_vendor_lge" remote="alliance" revision="mm" />
   <project path="vendor/moto" name="proprietary_vendor_moto" remote="alliance" revision="mm" />
-
-  <!-- Kernel Source -->
-  <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="mm" />
-
-  <!-- Alliance Control -->
-  <!-- NOTICE: Alliance Control will remain closed-source and proprietary until further notice. -->
-  <!-- 		   This is not open for discussion. Thank you. -->
-  <!--<project path="packages/apps/AllianceControlAOSP" name="alliance-control-aosp-inline" remote="ac" revision="mm" />-->
 
   <!-- platform tools -->
   <project path="tools/base" name="android_tools_base" groups="tools" remote="alliance" revision="mm" />
@@ -84,17 +78,11 @@
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" />
   <project path="device/generic/goldfish" name="device/generic/goldfish" groups="pdk" />
-  <project path="device/generic/mips" name="device/generic/mips" groups="pdk" />
   <project path="device/generic/mini-emulator-arm64" name="device/generic/mini-emulator-arm64" groups="pdk" />
   <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="pdk" />
-  <project path="device/generic/mini-emulator-mips" name="device/generic/mini-emulator-mips" groups="pdk" />
-  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="pdk" />
-  <project path="device/generic/mini-emulator-x86_64" name="device/generic/mini-emulator-x86_64" groups="pdk" />
   <project path="device/generic/qemu" name="device/generic/qemu" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
   <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" />
-  <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
-  <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="device/google/atv" name="device/google/atv" groups="device,fugu,broadcom_pdk,generic_fs" />
   <project path="device/htc/flounder" name="device/htc/flounder" groups="device,flounder,broadcom_pdk" />
   <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" groups="device,flounder,broadcom_pdk" clone-depth="1" />
