@@ -14,6 +14,7 @@
   <project path="build" name="android_build" groups="pdk" remote="alliance" revision="mm" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="art" name="platform/art" groups="pdk" remote="alliance" revision="mm" />
   <project path="manifest" name="manifest" remote="alliance" revision="mm" />
   <project path="device/asus/flo" name="android_device_asus_flo" groups="device,flo" remote="alliance" revision="mm" />
   <project path="device/huawei/angler" name="android_device_huawei_angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="mm" />
@@ -46,7 +47,6 @@
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
-  <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
