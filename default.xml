@@ -3,13 +3,21 @@
 
   <remote  name="aosp"
            fetch=".." />
+  <remote  name="alliance"
+  		   fetch="https://github.com/ALlianceAOSP/" />
   <default revision="refs/tags/android-7.0.0_r1"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform/build" groups="pdk,tradefed" >
+  <!-- ALLIANCE -->
+  <project path="build" name="platform/build" groups="pdk,tradefed" remote="alliance" revision="n" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk" remote="alliance" revision="n" />
+  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" remote="alliance" revision="n" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" groups="pdk-fs" remote="alliance" revision="n" />
+  <!-- END ALLIANCE -->
+
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" >
@@ -52,7 +60,6 @@
   <project path="device/google/dragon-kernel" name="device/google/dragon-kernel" groups="device,dragon" clone-depth="1" />
   <project path="device/htc/flounder" name="device/htc/flounder" groups="device,flounder,broadcom_pdk" />
   <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" groups="device,flounder,broadcom_pdk" clone-depth="1" />
-  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk" />
   <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk" />
   <project path="device/intel/edison" name="device/intel/edison" groups="device" />
   <project path="device/lge/bullhead" name="device/lge/bullhead" groups="device,bullhead" />
@@ -307,7 +314,6 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
